@@ -1,9 +1,8 @@
 {% extends 'AppBundle:Layout:layout.html.twig' %}
 
 {% block sidebar %}{% endblock %}
-{% block ccontent %}
-<div class="jumbotron">
-    <div class="container">
+
+{% block jumbotron %}
         <h1>SciPub</h1>
         <p>La nouvelle plate-forme de publication pour les scientiques !</p>
         <p>
@@ -11,10 +10,8 @@
                 Publier vos travaux &raquo;
             </a>
         </p>
-    </div>
-</div>
-
-<div class="container">
+{% endblock %}
+{% block ccontent %}
     <h2>Dernières publications</h2>
     <hr>
 
