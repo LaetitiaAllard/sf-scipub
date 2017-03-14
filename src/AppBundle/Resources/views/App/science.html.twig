@@ -1,13 +1,8 @@
 {% extends 'AppBundle:Layout:layout.html.twig' %}
 
-{% block ccontent %}
 
-    <div class="jumbotron">
-        <div class="container">
-
-
-
-            <div class="science-thumb">
+    {% block jumbotron %}
+        <div class="science-thumb">
                 <h1>{{ science.title }}</h1>
                 <div>
                     <p>
@@ -22,11 +17,12 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
+        {% endblock %}
 
-    <div class="container">
+
+{% block ccontent %}
         <h2>Publications de la science "{{ science.title }}"</h2>
         <hr>
 
@@ -52,8 +48,4 @@
         </div>
 
             {% endfor %}
-
-    </div>
-
-
-{% endblock %}
+    {% endblock %}

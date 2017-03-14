@@ -1,5 +1,6 @@
 {% extends 'AppBundle:Layout:layout.html.twig' %}
 
+{% block sidebar %}{% endblock %}
 {% block ccontent %}
 <div class="jumbotron">
     <div class="container">
@@ -14,7 +15,7 @@
 </div>
 
 <div class="container">
-    <h2>Denières publications</h2>
+    <h2>Dernières publications</h2>
     <hr>
 
     {% for publication in publications %}
