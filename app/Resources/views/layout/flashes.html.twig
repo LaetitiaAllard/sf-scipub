@@ -1,0 +1,9 @@
+{% if app.session.flashbag.peekAll is not empty %}
+    {% for type, flashes in app.session.flashbag.all %}
+        {% for flash in flashes %}
+            <div class="alert alert-{{ type }}">
+                {{ flash|raw }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endif %}

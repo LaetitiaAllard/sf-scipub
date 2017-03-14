@@ -1,0 +1,35 @@
+{% extends 'AppBundle:Layout:layout.html.twig' %}
+
+{% block sidebar %}{% endblock %}
+{% block jumbotron %}
+
+            <h1>Sciences</h1>
+
+{% endblock %}
+
+{% block ccontent %}
+        <h2>Liste des sciences</h2>
+        <hr>
+
+        {% for science in sciences %}
+
+        <div class="science-thumb">
+            <h3><a href="{{ path('app_science', {'idScience':science.id}) }}">{{ science.title }}</a></h3>
+            <div>
+                <p>
+                    {{ science.description }}
+                </p>
+                <p>
+                    <!-- Lien vers la page détail science -->
+                    <a href="{{ path('app_science', {'idScience':science.id}) }}"
+                       class="btn btn-sm btn-default">
+                        Voir les publications de la science {{ science.title }}
+                    </a>
+                </p>
+            </div>
+        </div>
+            {% endfor %}
+
+
+
+{% endblock %}

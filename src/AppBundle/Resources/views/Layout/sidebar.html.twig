@@ -1,0 +1,10 @@
+<ul class="nav nav-sidebar">
+    <h3>Liste des catégories</h3>
+    <ul>
+    {% for science in sciences %}
+
+        <li><a href="{{ path('app_science', {'idScience':science.id}) }}">{{ science.title }}</a></li>
+
+    {% endfor %}
+    </ul>
+</ul>
